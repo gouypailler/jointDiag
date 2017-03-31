@@ -1,0 +1,9 @@
+useDynLib(jointDiag, .registration = TRUE)
+export(jadiag)
+export(uwedge)
+export(ffdiag)
+export(qdiag)
+#export(lscjadiag)
+export(jedi)
+export(ajd)
+

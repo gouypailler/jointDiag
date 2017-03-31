@@ -1,4 +1,5 @@
 useDynLib(jointDiag, .registration = TRUE)
+importFrom("stats", "rnorm")
 export(jadiag)
 export(uwedge)
 export(ffdiag)

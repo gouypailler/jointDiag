@@ -6,11 +6,10 @@ void jadiagw(double c[], double w[], int *ptn, int *ptm, double a[],
 	     double *logdet, double *decr, double *result) {
   int n = *ptn;
   int m = *ptm;
-  int	i1,j1;
   int	n2 = n*n, mn2 = m*n2,
 	i, ic, ii, ij, j, jc, jj, k, k0;
   double  sumweigh, p2, q1, p, q,
-	alpha, beta, gamma, a12, a21, tiny, det;
+	alpha, beta, gamma, a12, a21, det;
   register double tmp1, tmp2, tmp, weigh;
 
   for (sumweigh = 0, i = 0; i < m; i++)

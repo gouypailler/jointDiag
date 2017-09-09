@@ -13,7 +13,7 @@ extern void dgeev_(char *JOBVL,char *JOBVR,int *N,double *A,int *LDA,
 // be careful because we do not check anything
 void eigen3(double *x, double *V, double *D) {
 	int n=size;
-	int i,j; 
+	int i; 
 	int	lwork, info;
 	double *work, wI[size], *left;
 	double xvals[size*size], tmp;
@@ -28,16 +28,16 @@ void eigen3(double *x, double *V, double *D) {
 	lwork = -1;
 	dgeev_(jobVL, jobVR, &n, xvals, &n, D, wI,
 		    left, &n, V, &n, &tmp, &lwork, &info);
-	if (info != 0) fprintf(stderr, "failure with error %d\n", info);
+	if (info != 0) REprintf("failure with error %d\n", info);
 	lwork = (int) tmp;
 	work = (double*)malloc(lwork*sizeof(double));
 	dgeev_(jobVL, jobVR, &n, xvals, &n, D, wI,
 		    left, &n, V, &n, work, &lwork, &info);
 	for (i=0; i<size; i++) { 
 		if (fabs(wI[i])>1e-12) 
-			fprintf(stderr, "failure: imaginary parts in evd\n");
+			REprintf("failure: imaginary parts in evd\n");
 	}
-	if (info != 0) fprintf(stderr, "failure with error %d\n", info);
+	if (info != 0) REprintf("failure with error %d\n", info);
 	double auxv[size],aux;
 	if (fabs(D[1])<fabs(D[2])) {
 		aux = D[1];
@@ -78,7 +78,7 @@ void iterJDI(double *C, int *pMatSize, int *pMatNumber, int *ptn,int *ptm,
 	int MN=*pMatNumber;
 	int MS=*pMatSize;
 	int i,j,k;
-	int d3,d2;
+	int d3;
 
 	double tmm[MN];
 	double tnn[MN];

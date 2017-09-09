@@ -1,7 +1,7 @@
 Package: jointDiag
 Version: 0.3
-Date: 2009-04-29
-Title: Joint Approximate Diagonalization of a set of square matrices
+Date: 2017-09-09
+Title: Joint Approximate Diagonalization of a Set of Square Matrices
 Author: Cedric Gouy-Pailler <cedric.gouypailler@gmail.com> 
 Maintainer: Cedric Gouy-Pailler <cedric.gouypailler@gmail.com>
 Depends: 
@@ -12,7 +12,4 @@ Description: Different algorithms to perform approximate joint diagonalization
 	are particularly useful in the context of blind source separation. 
 License: GPL (>= 2)
 URL: https://github.com/gouypailler/jointDiag
-
-
-
-
+RoxygenNote: 6.0.1

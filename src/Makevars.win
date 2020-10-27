@@ -1,6 +1,5 @@
 # For R Library 
 PKG_LIBS = $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
-PKG_CXXFLAGS = -I$(R_HOME)/include -D_RDLL_
 
 
 

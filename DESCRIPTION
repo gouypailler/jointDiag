@@ -1,6 +1,6 @@
 Package: jointDiag
-Version: 0.3
-Date: 2017-09-09
+Version: 0.4
+Date: 2020-10-27
 Title: Joint Approximate Diagonalization of a Set of Square Matrices
 Author: Cedric Gouy-Pailler <cedric.gouypailler@gmail.com> 
 Maintainer: Cedric Gouy-Pailler <cedric.gouypailler@gmail.com>
